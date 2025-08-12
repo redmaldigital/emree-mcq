@@ -12,6 +12,7 @@ those topics"\
 statements are new but concepts are what have tested in the past or
 around those topics."
 
+
 "Make sure to read through all the past year qns.. quite a few were
 repeated.![](vertopal_08d2ef35bb3144adaa216b8289bc070a/media/image5.png){width="2.6548414260717412in"
 height="1.7412325021872266in"}

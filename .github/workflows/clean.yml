@@ -1,0 +1,23 @@
+name: Clean MCQs
+on:
+  push:
+    paths:
+      - raw.md
+      - clean_mcqs.py
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run cleaner
+        run: python3 clean_mcqs.py
+      - name: Commit master.md
+        run: |
+          git config user.name "autobot"
+          git config user.email "bot@example.com"
+          git add master.md || true
+          git commit -m "Auto-generate master.md" || echo "No changes"
+          git push
